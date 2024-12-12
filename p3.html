@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log Plot</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div id="plot"></div>
+    <script>
+        const data = [
+            {
+                x: [1,11,21,31,41,51,61,71,81,91],
+                y: [32.4656,43.0396,43.3468,43.5408,43.7187,43.7833,43.9289,44.0097,44.0259,44.0905],
+                mode: 'lines+markers',
+                type: 'scatter',
+                name: 'Accuracy'
+            },
+            {
+                x: [1,11,21,31,41,51,61,71,81,91],
+                y: [10632,10668,10662,10651,10645,10640,10634,10630,10629,10629],
+                mode: 'lines+markers',
+                type: 'scatter',
+                name: 'nSV'
+            },
+            {
+                x: [1,11,21,31,41,51,61,71,81,91],
+                y: [11679,43765,44661,44614,44582,44618,44470,44140,44504,44488],
+                mode: 'lines+markers',
+                type: 'scatter',
+                name: 'iter'
+            },
+            {
+                x: [1,11,21,31,41,51,61,71,81,91],
+                y: [0.864428,0.235844,0.128769,0.089981,0.070118,0.058042,0.049925,0.044092,0.039661,0.036201],
+                mode: 'lines+markers',
+                type: 'scatter',
+                name: 'nu'
+            },
+            {
+                x: [1,11,21,31,41,51,61,71,81,91],
+                y: [-7024.150613,-14969.57388,-15934.188564,-16851.851906,-17759.395347,-18656.443741,-19543.310684,-20420.0015,-21289.183451,-22153.631809],
+                mode: 'lines+markers',
+                type: 'scatter',
+                name: 'obj'
+            },
+            {
+                x: [1,11,21,31,41,51,61,71,81,91],
+                y: [-0.074125,-0.061962,-0.060474,-0.058153,-0.056005,-0.053814,-0.051598,-0.049547,-0.049007,-0.048508],
+                mode: 'lines+markers',
+                type: 'scatter',
+                name: 'rho'
+            },
+            {
+                x: [1,11,21,31,41,51,61,71,81,91],
+                y: [7487,161,97,96,95,95,95,94,93,93],
+                mode: 'lines+markers',
+                type: 'scatter',
+                name: 'nBSV'
+            }
+        ];
+
+        const layout = {
+            title: 'Log Data Plot',
+            xaxis: { title: 'g' },
+            yaxis: { title: 'Values' }
+        };
+
+        Plotly.newPlot('plot', data, layout);
+    </script>
+</body>
+</html>
